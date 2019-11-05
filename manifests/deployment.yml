@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: ssmbclouddockercomposemultiplatform 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ssmbclouddockercomposemultiplatform 
+    spec:
+      containers:
+        - name: ssmbclouddockercomposemultiplatform 
+          image: wpdev.azurecr.io/ssmbclouddockercomposemultiplatform
+          ports:
+          - containerPort: 80
